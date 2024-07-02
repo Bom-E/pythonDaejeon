@@ -1,0 +1,22 @@
+# backend
+*/backend/venv
+*.backend/__pycache__/
+*.pyc
+
+# frontend
+*/frontend/node_modules/
+*/frontend/build
+
+# General
+.env
+.DS_Store
+
+# IDE specific files
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
