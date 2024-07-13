@@ -28,7 +28,6 @@ class CrimeDay(Base):
 
     __table_args__ = (
         UniqueConstraint('year', 'crime_name', name='day_year_crime')
-        , Index()
         ,)
 
     def __repr__(self):
@@ -48,7 +47,6 @@ class CrimeTime(Base):
 
     __table_args__ = (
         UniqueConstraint('year', 'crime_name', name='time_year_crime')
-        ,Index()
         ,)
 
     def __repr__(self):
@@ -101,8 +99,6 @@ class CrimeHouse(Base):
     road_addr = Column(String(70), index=True)
     land_name_addr = Column(String(70), index=True)
     call_number = Column(String(40))
-    # CALL_NUMBER 부분은 전화번호 없음 하고 그 NAME에 따라 소비자 보호센터 데이터를 받아 오는 게 더 효울적인지, 아니면 그냥 이렇게 하는 게 효율적인지.
-    # 이정도 데이터에서는 그닥 성능 차이 없을 것 같은데??
     police_station = Column(String(30))
     x = Column(Numeric(9, 6))
     y = Column(Numeric(8, 6))
