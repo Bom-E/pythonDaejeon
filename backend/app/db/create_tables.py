@@ -1,11 +1,14 @@
 from sqlalchemy import create_engine
 import sys
+from dotenv import load_dotenv
 import os
 sys.path.append(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))))
 from app.models import Base, CrimeDay, CrimeTime, CrimeFive, CrimeCctv, CrimeHouse
 
+load_dotenv()
+
 # 데이터베이스 url 설정
-DATABASE_URL = "mysql+pymysql://python_daejeon:1111@127.0.0.1:3306/python_daejeon"
+DATABASE_URL = os.getenv('database_url')
 
 print(f"Connecting to database: {DATABASE_URL}")
 

@@ -16,7 +16,7 @@
 # from sqlalchemy.orm import sessionmaker
 
 # 데이터베이스 URL
-# DATABASE_URL = "mysql+pymysql://python_daejeon:1111@127.0.0.1:3306/python_daejeon"
+# DATABASE_URL = "os.getenv(database_url)"
 
 # 엔진 생성
 # engine = create_engine(DATABASE_URL)
